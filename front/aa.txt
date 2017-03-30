@@ -1,0 +1,10 @@
+没有优化
+myapp : 170
+root :  900
+
+优化后 
+直接访问tomcat
+myapp : 800-1000
+root : 800-1000
+加了varnish后
+myapp : 1800

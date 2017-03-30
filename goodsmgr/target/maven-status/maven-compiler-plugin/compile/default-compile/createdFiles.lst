@@ -1,0 +1,13 @@
+com\sishuok\architecture1\goodsmgr\service\GoodsService.class
+com\sishuok\architecture1\test\ClientTest2.class
+com\sishuok\architecture1\goodsmgr\dao\GoodsMongoDBImpl.class
+com\sishuok\architecture1\goodsmgr\dao\GoodsDAO.class
+com\sishuok\architecture1\goodsmgr\dao\GoodsRedisImpl.class
+com\sishuok\architecture1\goodsmgr\vo\GoodsModel.class
+com\sishuok\architecture1\goodsmgr\dao\GoodsMongoDBDAO.class
+com\sishuok\architecture1\goodsmgr\vo\GoodsQueryModel.class
+com\sishuok\architecture1\goodsmgr\dao\MemcachedImpl.class
+com\sishuok\architecture1\goodsmgr\dao\GoodsRedisDAO.class
+com\sishuok\architecture1\goodsmgr\dao\GoodsMapperDAO.class
+com\sishuok\architecture1\goodsmgr\service\IGoodsService.class
+com\sishuok\architecture1\goodsmgr\dao\RedisHelper.class
