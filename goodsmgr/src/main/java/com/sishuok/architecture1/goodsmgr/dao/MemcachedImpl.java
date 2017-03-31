@@ -12,7 +12,7 @@ import com.sishuok.architecture1.goodsmgr.vo.GoodsQueryModel;
 import com.sishuok.pageutil.Page;
 import com.whalin.MemCached.MemCachedClient;
 
-//@Service
+@Service
 @Primary
 public class MemcachedImpl implements GoodsDAO{
 	private final String MEM_PRE = "Goods";

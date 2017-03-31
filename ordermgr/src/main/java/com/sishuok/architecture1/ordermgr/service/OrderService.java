@@ -46,7 +46,7 @@ public class OrderService extends BaseService<OrderModel,OrderQueryModel> implem
 			cqm.setCustomerUuid(customerUuid);
 			
 			Page<CartModel>  page = ics.getByConditionPage(cqm);
-			//2:
+			//2:每个消费者的购物车里面进行计算金额  然后写入订单表
 			float totalMoney = 0.0f;
 			for(CartModel cm : page.getResult()){
 				totalMoney += 10;
@@ -67,7 +67,7 @@ public class OrderService extends BaseService<OrderModel,OrderQueryModel> implem
 			Page<OrderModel>  orderPage = getByConditionPage(oqm);
 			order = orderPage.getResult().get(0);
 			
-			//3:
+			//3:写入订单明细表
 			for(CartModel cm : page.getResult()){
 				OrderDetailModel odm = new OrderDetailModel();
 				odm.setGoodsUuid(cm.getGoodsUuid());
@@ -78,7 +78,7 @@ public class OrderService extends BaseService<OrderModel,OrderQueryModel> implem
 				odm.setOrderUuid(order.getUuid());
 				
 				iods.create(odm);
-				//4:
+				//4:减库存
 				StoreModel storeModel = iss.getByGoodsUuid(cm.getGoodsUuid());
 				storeModel.setStoreNum(storeModel.getStoreNum() - odm.getOrderNum());
 				iss.update(storeModel);

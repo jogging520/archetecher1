@@ -31,13 +31,15 @@ public class LoginController {
 	@RequestMapping(value="/login",method=RequestMethod.POST)
 	public String login(@RequestParam("customerId")String customerId
 			,@RequestParam("pwd")String pwd,HttpServletResponse response){
-		
+System.out.println("customerId is "+customerId);
 		if(customerId==null || customerId.trim().length()==0){
 			return "login";
 		}
 		//ics.getByUuid(1);
+		System.out.println("customerservice ics is "+ics);
+
 		CustomerModel cm = ics.getByCustomerId(customerId);
-		
+		System.out.println("cm is "+cm);
 		if(cm==null || cm.getUuid()<=0){
 			return "login";
 		}

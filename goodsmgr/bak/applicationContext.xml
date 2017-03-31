@@ -34,7 +34,7 @@
 		<property name="username">
 			<value>root</value>
 		</property>
-		<property name="password" value="cc" />
+		<property name="password" value="root" />
 	</bean>
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -49,12 +49,12 @@
 	
 	
 	<!--memcached 客户端 SocketPool-->    
-    <bean id="memcachedPool" class="com.danga.MemCached.SockIOPool" factory-method="getInstance" 
+    <bean id="memcachedPool" class="com.whalin.MemCached.SockIOPool" factory-method="getInstance" 
     init-method="initialize" destroy-method="shutDown">      
         <constructor-arg><value>neeaMemcachedPool</value></constructor-arg>  
 	        <property name="servers">    
 	            <list>    
-	                <value>192.168.1.106:2222</value>	                
+	                <value>59.110.158.68:11211</value>	                
 	            </list>    
 	        </property>    
 	        <property name="weights">
@@ -85,7 +85,7 @@
 	        </property>    
 	    </bean>  	        
 	    <!--memcached client-->    
-	    <bean id="memCachedClient" class="com.danga.MemCached.MemCachedClient">    
+	    <bean id="memCachedClient" class="com.whalin.MemCached.MemCachedClient">    
 	        <constructor-arg>    
 	            <value>neeaMemcachedPool</value>    
 	        </constructor-arg>   

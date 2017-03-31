@@ -13,7 +13,7 @@ import com.sishuok.architecture1.customermgr.vo.CustomerModel;
 import com.sishuok.architecture1.customermgr.vo.CustomerQueryModel;
 import com.sishuok.pageutil.Page;
 
-@Service
+//@Service
 @Transactional
 public class Client {
 	@Autowired

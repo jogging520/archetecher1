@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.sishuok.architecture1.goodsmgr.dao.GoodsDAO;
 import com.sishuok.architecture1.goodsmgr.vo.GoodsModel;
 import com.sishuok.architecture1.goodsmgr.vo.GoodsQueryModel;
-//@Service
+@Service
 public class ClientTest2 {
 	@Autowired
 	private GoodsDAO dao;
