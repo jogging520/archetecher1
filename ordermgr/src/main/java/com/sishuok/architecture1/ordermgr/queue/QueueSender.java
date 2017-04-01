@@ -17,7 +17,7 @@ import org.apache.activemq.MessageTransformer;
 
 public class QueueSender {
 	private static ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(
-			"tcp://192.168.1.205:61616");
+			"tcp://59.110.158.68:61616");
 	
 	public static void sendMsg(int customerUuid) {
 		Connection connection = null;

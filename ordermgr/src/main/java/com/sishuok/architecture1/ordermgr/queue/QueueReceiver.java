@@ -45,7 +45,7 @@ public class QueueReceiver implements ServletContextListener{
 		final Session session;
 		try {
 			ActiveMQConnectionFactory cf = new ActiveMQConnectionFactory(
-					"tcp://192.168.1.106:61676");
+					"tcp://59.110.158.68:61616");
 			
 			for(int i=0;i<1;i++){
 				new MyT(ics,ios,iods,iss,cf).start();
